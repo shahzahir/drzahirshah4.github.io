@@ -4,207 +4,125 @@
 <meta charset="UTF-8">
 <title>Dr. Zahir Ahmad Shah | Academic Homepage</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
+
 <style>
-:root{
-  --primary:#0b3c5d;
-  --accent:#1d70b8;
-  --bg:#f4f7fb;
-  --card:#ffffff;
-  --soft:#f0f5fb;
+body { margin:0; font-family: "Segoe UI", Arial, sans-serif; background:#f4f7fb; line-height:1.7; }
+header { background:linear-gradient(120deg,#0b3c5d,#1d70b8); color:white; padding:40px 20px; }
+.header-container { max-width:1100px; margin:auto; display:flex; align-items:center; gap:30px; }
+.header-container img { border-radius:50%; width:160px; height:160px; border:5px solid white; }
+header h1 { margin:0; font-size:40px; }
+header p { margin:6px 0; font-size:18px; }
+
+nav { background:#0b3c5d; padding:10px; text-align:center; }
+nav a { color:white; margin:10px 15px; text-decoration:none; font-weight:600; cursor:pointer; }
+nav a:hover { text-decoration:underline; }
+
+.container { max-width:1100px; margin:auto; padding:30px; background:white; min-height:500px; }
+
+.section { display:none; }
+.section.active { display:block; }
+
+h2 { color:#0b3c5d; border-bottom:3px solid #e0e0e0; padding-bottom:6px; }
+
+.card {
+  background:#f9fbfd;
+  border-left:5px solid #1d70b8;
+  padding:20px;
+  margin:15px 0;
+  box-shadow:0 2px 5px rgba(0,0,0,0.05);
 }
 
-*{box-sizing:border-box}
-body{
-  margin:0;
-  font-family: "Segoe UI", Arial, sans-serif;
-  background:var(--bg);
-  line-height:1.7;
-  color:#1f2933;
-}
-
-/* Header */
-header{
-  background:linear-gradient(120deg,#0b3c5d,#1d70b8);
-  color:white;
-  padding:50px 20px;
-}
-.header-container{
-  max-width:1200px;
-  margin:auto;
-  display:grid;
-  grid-template-columns:180px 1fr;
-  gap:30px;
-  align-items:center;
-}
-.header-container img{
-  width:170px;height:170px;
-  border-radius:50%;
-  border:6px solid white;
-  object-fit:cover;
-}
-header h1{margin:0;font-size:42px;}
-header p{margin:6px 0;font-size:18px;}
-
-.buttons a{
+.buttons a {
   display:inline-block;
-  margin:10px 10px 0 0;
+  margin:10px 10px 10px 0;
   padding:10px 16px;
   background:#ffffff;
   color:#0b3c5d;
   text-decoration:none;
-  border-radius:6px;
-  font-weight:600;
-  transition:.2s;
-}
-.buttons a:hover{background:#e6eef6}
-
-/* Nav */
-nav{
-  background:#0b3c5d;
-  position:sticky;
-  top:0;
-  z-index:1000;
-  padding:12px;
-  text-align:center;
-}
-nav a{
-  color:white;
-  margin:10px 15px;
-  text-decoration:none;
+  border-radius:5px;
   font-weight:600;
 }
-nav a:hover{text-decoration:underline}
+.buttons a:hover { background:#e6eef6; }
 
-/* Layout */
-.container{
-  max-width:1200px;
-  margin:auto;
-  padding:40px 20px;
-}
-
-.section{margin-bottom:70px;}
-.section h2{
-  color:var(--primary);
-  border-bottom:3px solid #e0e0e0;
-  padding-bottom:8px;
-  margin-bottom:25px;
-}
-
-/* Cards & grids */
-.grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-  gap:25px;
-}
-
-.card{
-  background:var(--card);
-  border-radius:12px;
-  padding:25px;
-  box-shadow:0 8px 20px rgba(0,0,0,0.06);
-}
-
-.highlight{
-  background:linear-gradient(120deg,#f0f6fc,#ffffff);
-  border-left:6px solid var(--accent);
-}
-
-.stat{
-  text-align:center;
-  padding:25px;
-}
-.stat h3{margin:0;font-size:36px;color:var(--accent)}
-.stat p{margin:0;font-weight:600;color:#444}
-
-ul{margin-left:20px}
-li{margin-bottom:8px}
-
-/* Footer */
-footer{
+footer {
   background:#0b3c5d;
   color:white;
   text-align:center;
-  padding:25px;
-  margin-top:60px;
+  padding:20px;
+  margin-top:40px;
 }
 </style>
+
+<script>
+function showSection(id){
+  var sections = document.getElementsByClassName("section");
+  for(let i=0;i<sections.length;i++){
+    sections[i].classList.remove("active");
+  }
+  document.getElementById(id).classList.add("active");
+}
+</script>
 </head>
 <body>
 
 <header>
-  <div class="header-container">
-    <img src="zahir_400x400.jpg" alt="Dr Zahir Ahmad Shah">
-    <div>
-      <h1>Dr. Zahir Ahmad Shah</h1>
-      <p><b>INSPIRE Faculty, Department of Physics, Central University of Kashmir</b></p>
-      <p>High-Energy Astrophysics • Supermassive Black Hole Systems • Blazar Physics • Multiwavelength Data Analysis</p>
+<div class="header-container">
+<img src="zahir_400x400.jpg" alt="Dr Zahir Ahmad Shah">
+<div>
+<h1>Dr. Zahir Ahmad Shah</h1>
+<p><b>INSPIRE Faculty, Department of Physics, Central University of Kashmir</b></p>
+<p>High-Energy Astrophysics • Supermassive Black Hole Systems • Blazar Physics • Multiwavelength Data Analysis</p>
 
-      <div class="buttons">
-        <a href="zahir_cv.pdf" target="_blank">Download CV</a>
-        <a href="https://scholar.google.com/citations?user=lmhC7hUAAAAJ&hl=en" target="_blank">Google Scholar</a>
-        <a href="https://orcid.org/0000-0003-1458-4396" target="_blank">ORCID</a>
-        <a href="#" target="_blank">NASA ADS</a>
-      </div>
-    </div>
-  </div>
+<div class="buttons">
+<a href="zahir_cv.pdf" target="_blank">Download CV</a>
+<a href="https://scholar.google.com/citations?user=lmhC7hUAAAAJ&hl=en" target="_blank">Google Scholar</a>
+<a href="https://orcid.org/0000-0003-1458-4396" target="_blank">ORCID</a>
+<a href="#">NASA ADS</a>
+</div>
+</div>
+</div>
 </header>
 
 <nav>
-<a href="#home">Home</a>
-<a href="#about">About</a>
-<a href="#research">Research</a>
-<a href="#grants">Grants</a>
-<a href="#proposals">Proposals</a>
-<a href="#publications">Publications</a>
-<a href="#teaching">Teaching</a>
-<a href="#talks">Talks</a>
-<a href="#contact">Contact</a>
+<a onclick="showSection('home')">Home</a>
+<a onclick="showSection('about')">About</a>
+<a onclick="showSection('research')">Research</a>
+<a onclick="showSection('grants')">Grants</a>
+<a onclick="showSection('proposals')">Proposals</a>
+<a onclick="showSection('publications')">Publications</a>
+<a onclick="showSection('teaching')">Teaching</a>
+<a onclick="showSection('talks')">Talks</a>
+<a onclick="showSection('contact')">Contact</a>
 </nav>
 
 <div class="container">
 
 <!-- HOME -->
-<div id="home" class="section">
-<h2>Profile Snapshot</h2>
-<div class="grid">
-  <div class="card highlight">
-    I am an INSPIRE Faculty at the Department of Physics, Central University of Kashmir, working on the physics of relativistic jets and supermassive black holes using multiwavelength observations and theoretical modeling. My work combines Fermi-LAT, Swift, NuSTAR, NICER and AstroSat data with numerical and analytical solutions of the Fokker–Planck equation.
-  </div>
-
-  <div class="card stat">
-    <h3>35+</h3><p>Refereed Papers</p>
-  </div>
-  <div class="card stat">
-    <h3>₹130L+</h3><p>Research Funding</p>
-  </div>
-  <div class="card stat">
-    <h3>15+</h3><p>Years Research Experience</p>
-  </div>
+<div id="home" class="section active">
+<h2>Home</h2>
+<div class="card">
+I am an INSPIRE Faculty at the Department of Physics, Central University of Kashmir. I am an Astrophysicist specialized in probing supermassive black hole environments through spectral and temporal signatures, with a particular focus on blazars. My work combines broadband multi-wavelength observations from Fermi-LAT, Swift, NuSTAR, NICER and AstroSat with theoretical modeling and Fokker–Planck equation based particle evolution models.
 </div>
 </div>
 
 <!-- ABOUT -->
 <div id="about" class="section">
 <h2>About</h2>
-<div class="grid">
-  <div class="card">
-    <p><b>Ph.D.</b> University of Kashmir (2018)</p>
-    <p>Thesis: <i>Understanding the Spectral and Temporal Behaviour of High Energy Blazars</i></p>
-    <p>Supervisor: Prof. Naseer Iqbal<br>Co-supervisor: Dr. Sunder Sahayanathan</p>
-    <p><b>CSIR-UGC NET:</b> AIR 15</p>
-  </div>
-  <div class="card">
-    <ul>
-      <li>M.Phil., University of Kashmir (2014)</li>
-      <li>M.Sc. Physics, University of Kashmir (2011)</li>
-      <li>B.Sc., University of Kashmir (2009)</li>
-    </ul>
-    <p><b>Positions:</b></p>
-    <ul>
-      <li>INSPIRE Faculty, CUK (2021–Present)</li>
-      <li>Postdoctoral Fellow, IUCAA (2018–2021)</li>
-    </ul>
-  </div>
+<div class="card">
+<p><b>Ph.D.</b> University of Kashmir (2018)</p>
+<p>Thesis: <i>Understanding the Spectral and Temporal Behaviour of High Energy Blazars</i></p>
+<p>Supervisor: Prof. Naseer Iqbal | Co-supervisor: Dr. Sunder Sahayanathan</p>
+<ul>
+<li>M.Phil., University of Kashmir (2014)</li>
+<li>M.Sc. Physics, University of Kashmir (2011)</li>
+<li>B.Sc., University of Kashmir (2009)</li>
+</ul>
+<p><b>CSIR-UGC NET:</b> AIR 15</p>
+<p><b>Positions:</b></p>
+<ul>
+<li>INSPIRE Faculty, CUK (2021–Present)</li>
+<li>Postdoctoral Fellow, IUCAA (2018–2021)</li>
+</ul>
 </div>
 </div>
 
@@ -227,9 +145,11 @@ footer{
 <!-- GRANTS -->
 <div id="grants" class="section">
 <h2>Research Grants</h2>
-<div class="grid">
-  <div class="card"><b>DST INSPIRE Faculty Fellowship</b><br>₹77.40 Lakh + ₹35 Lakh Research Grant</div>
-  <div class="card"><b>ISRO AstroSat Project (Co-I)</b><br>₹18.37 Lakh</div>
+<div class="card">
+<ul>
+<li>DST INSPIRE Faculty Fellowship: ₹77.40 Lakh + ₹35 Lakh Research Grant</li>
+<li>Co-I: ISRO AstroSat Data Utilization Project: ₹18.37 Lakh</li>
+</ul>
 </div>
 </div>
 
@@ -250,18 +170,20 @@ footer{
 <div id="publications" class="section">
 <h2>Publications</h2>
 <div class="card">
-<p><b>35+ papers in PRD, MNRAS, ApJ, JHEAP, ApJS, RAA, New Astronomy, etc.</b></p>
-<p>Full detailed list can be expanded further with DOI links (already in your CV).</p>
+<p><b>35+ refereed papers in PRD, MNRAS, ApJ, JHEAP, ApJS, RAA, New Astronomy, etc.</b></p>
+<p>Full publication list can be inserted here in detail (already in your CV).</p>
 </div>
 </div>
 
 <!-- TEACHING -->
 <div id="teaching" class="section">
 <h2>Teaching</h2>
-<div class="grid">
-  <div class="card">Quantum Mechanics</div>
-  <div class="card">Relativistic Quantum Mechanics</div>
-  <div class="card">Mathematical Physics</div>
+<div class="card">
+<ul>
+<li>Quantum Mechanics</li>
+<li>Relativistic Quantum Mechanics</li>
+<li>Mathematical Physics</li>
+</ul>
 </div>
 </div>
 
@@ -279,4 +201,22 @@ footer{
 </div>
 
 <!-- CONTACT -->
-<div id="co
+<div id="contact" class="section">
+<h2>Contact</h2>
+<div class="card">
+<p>
+<b>Email:</b> shahzahir4@gmail.com<br>
+<b>Phone:</b> +91-7780864526<br>
+<b>Address:</b> Department of Physics, Central University of Kashmir, Ganderbal-191201, J&K, India
+</p>
+</div>
+</div>
+
+</div>
+
+<footer>
+© Dr. Zahir Ahmad Shah | Academic Homepage
+</footer>
+
+</body>
+</html>
