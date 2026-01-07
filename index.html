@@ -2,59 +2,226 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Dr. Zahir Ahmad Shah</title>
+<title>Dr. Zahir Ahmad Shah | Academic Homepage</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
-body { font-family: Arial, sans-serif; margin: 40px; line-height: 1.6; max-width: 1000px; }
-h1, h2, h3 { color: #0b3c5d; }
-nav a { margin-right: 15px; text-decoration: none; font-weight: bold; color: #1d70b8; }
-.section { margin-top: 40px; }
+body { margin:0; font-family: "Segoe UI", Arial, sans-serif; background:#f4f7fb; line-height:1.7; }
+header { background:linear-gradient(120deg,#0b3c5d,#1d70b8); color:white; padding:40px 20px; }
+.header-container { max-width:1100px; margin:auto; display:flex; align-items:center; gap:30px; }
+.header-container img { border-radius:50%; width:160px; height:160px; border:5px solid white; }
+header h1 { margin:0; font-size:40px; }
+header p { margin:6px 0; font-size:18px; }
+
+nav { background:#0b3c5d; position:sticky; top:0; z-index:1000; padding:10px; text-align:center; }
+nav a { color:white; margin:10px 15px; text-decoration:none; font-weight:600; }
+nav a:hover { text-decoration:underline; }
+
+.container { max-width:1100px; margin:auto; padding:30px; background:white; }
+
+.section { margin-bottom:60px; }
+h2 { color:#0b3c5d; border-bottom:3px solid #e0e0e0; padding-bottom:6px; }
+
+ul { margin-left:20px; }
+li { margin-bottom:6px; }
+
+.card {
+  background:#f9fbfd;
+  border-left:5px solid #1d70b8;
+  padding:20px;
+  margin:15px 0;
+  box-shadow:0 2px 5px rgba(0,0,0,0.05);
+}
+
+.buttons a {
+  display:inline-block;
+  margin:10px 10px 10px 0;
+  padding:10px 16px;
+  background:#1d70b8;
+  color:white;
+  text-decoration:none;
+  border-radius:5px;
+  font-weight:600;
+}
+.buttons a:hover { background:#155a8a; }
+
+footer {
+  background:#0b3c5d;
+  color:white;
+  text-align:center;
+  padding:20px;
+}
 </style>
 </head>
 <body>
 
+<header>
+<div class="header-container">
+<img src="zahir_400x400.jpg" alt="Dr Zahir Ahmad Shah">
+<div>
 <h1>Dr. Zahir Ahmad Shah</h1>
-<p><b>INSPIRE Faculty, Department of Physics, Central University of Kashmir</b><br>
-High-Energy Astrophysics | Blazar Physics | Multiwavelength Astronomy</p>
+<p><b>INSPIRE Faculty, Department of Physics, Central University of Kashmir</b></p>
+<p>High-Energy Astrophysics • Blazar Physics • Multiwavelength Astronomy</p>
+
+<div class="buttons">
+<a href="CV.pdf" target="_blank">Download CV</a>
+<a href="#" target="_blank">Google Scholar</a>
+<a href="#" target="_blank">ORCID</a>
+<a href="#" target="_blank">NASA ADS</a>
+</div>
+</div>
+</div>
+</header>
 
 <nav>
-<a href="index.html">Home</a>
-<a href="research.html">Research</a>
-<a href="publications.html">Publications</a>
-<a href="teaching.html">Teaching</a>
-<a href="contact.html">Contact</a>
+<a href="#home">Home</a>
+<a href="#about">About</a>
+<a href="#research">Research</a>
+<a href="#grants">Grants</a>
+<a href="#proposals">Proposals</a>
+<a href="#publications">Publications</a>
+<a href="#teaching">Teaching</a>
+<a href="#talks">Talks</a>
+<a href="#contact">Contact</a>
 </nav>
 
-<div class="section">
-<h2>About Me</h2>
-<p>
-I am an INSPIRE Faculty at the Department of Physics, Central University of Kashmir. My research focuses on broadband spectral and temporal studies of blazars using multi-wavelength data, theoretical modeling, and time-domain analysis.
-</p>
+<div class="container">
 
-<p>
-I obtained my Ph.D. from the University of Kashmir (2018) with a thesis titled <i>Understanding the Spectral and Temporal Behaviour of High Energy Blazars</i>.
-</p>
+<div id="home" class="section">
+<h2>Home</h2>
+<div class="card">
+I am an INSPIRE Faculty at the Department of Physics, Central University of Kashmir. My research focuses on broadband spectral and temporal studies of blazars using multi-wavelength observations, theoretical modeling, and statistical analysis of time-domain astronomical data.
+</div>
 </div>
 
-<div class="section">
-<h2>Research Interests</h2>
+<div id="about" class="section">
+<h2>About</h2>
+<div class="card">
+<p><b>Ph.D.</b> University of Kashmir (2018)</p>
+<p>Thesis: <i>Understanding the Spectral and Temporal Behaviour of High Energy Blazars</i></p>
+<p>Supervisor: Prof. Naseer Iqbal | Co-supervisor: Dr. Sunder Sahayanathan</p>
+
 <ul>
-<li>Broadband spectral and temporal studies of blazars</li>
-<li>Theoretical SED modeling and particle acceleration/cooling</li>
-<li>Time-resolved spectroscopy and variability analysis</li>
-<li>Statistical study of long-term light curves</li>
-<li>Numerical/analytical solutions of Fokker–Planck equations</li>
+<li>M.Phil., University of Kashmir (2014)</li>
+<li>M.Sc. Physics, University of Kashmir (2011)</li>
+<li>B.Sc., University of Kashmir (2009)</li>
+</ul>
+
+<p><b>CSIR-UGC NET:</b> All India Rank 15</p>
+
+<p><b>Positions:</b></p>
+<ul>
+<li>INSPIRE Faculty, Central University of Kashmir (2021–Present)</li>
+<li>Postdoctoral Fellow, IUCAA Pune (2018–2021)</li>
 </ul>
 </div>
+</div>
 
-<div class="section">
+<div id="research" class="section">
+<h2>Research Interests & Expertise</h2>
+<div class="card">
+<ul>
+<li>Broadband spectral and temporal studies of blazars</li>
+<li>Multiwavelength data analysis: Fermi-LAT, Swift, NuSTAR, AstroSat, TACTIC</li>
+<li>Theoretical SED modeling and jet physics</li>
+<li>Particle acceleration and cooling processes</li>
+<li>Time-resolved spectroscopy</li>
+<li>Statistical characterization of long-term blazar light curves</li>
+<li>Numerical/analytical solutions of Fokker–Planck equations</li>
+<li>Software: Python, FORTRAN, XSPEC, PYXSPEC, Gnuplot, Matplotlib</li>
+</ul>
+</div>
+</div>
+
+<div id="grants" class="section">
+<h2>Research Grants</h2>
+<div class="card">
+<ul>
+<li>DST INSPIRE Faculty Fellowship: Rs. 77.40 Lakhs + Research Grant Rs. 35 Lakhs</li>
+<li>Co-I: ISRO AstroSat Data Utilization Project: Rs. 18.37 Lakhs</li>
+</ul>
+</div>
+</div>
+
+<div id="proposals" class="section">
+<h2>Accepted AstroSat Proposals</h2>
+<div class="card">
+<ul>
+<li>PI: Spectral Breaks and Thermal Emission of High-z FSRQs (A03-77)</li>
+<li>PI: Broadband SED of BL Lac blazars (A04-094)</li>
+<li>PI: MW observation of FSRQ PMNJ1923-2104 (T03-018)</li>
+<li>Co-PI: Mrk 421 (T01-218)</li>
+<li>Co-PI: Mrk 180 (A05-064)</li>
+<li>Co-PI: PKS 0352-686 (A05-202)</li>
+</ul>
+</div>
+</div>
+
+<div id="publications" class="section">
+<h2>Publications (Selected, Refereed)</h2>
+<div class="card">
+<p><b>35+ papers in MNRAS, ApJ, PRD, JHEAP, ApJS, RAA, New Astronomy, etc.</b></p>
+<p><b>Full list (from your CV):</b></p>
+<ol>
+<li>Shah Z. et al., Phys. Rev. D, 2025, 111, 123052.</li>
+<li>Peer A., Dar A. A., Shah Z. et al., MNRAS, 2025.</li>
+<li>Sikandar A., Shah Z. et al., Phys. Rev. D, 2025.</li>
+<li>Dar A., Shah Z. et al., New Astronomy, 2025.</li>
+<li>Shah Z., MNRAS, 2024, 527, 5140–5154.</li>
+<li>Malik Z. et al., MNRAS, 2025.</li>
+<li>Tantry J. et al., JHEAP, 2025.</li>
+<li>Ahanger S. et al., JHEAP, 2025.</li>
+<li>Sikandar A. et al., JHEAP, 2025.</li>
+<li>Shah Z. et al., MNRAS, 2022, 504, 5485.</li>
+<li>Shah Z. et al., MNRAS, 2021, 504, 416.</li>
+<li>Tantry J. et al., JHEAP, 2024.</li>
+<li>Sikandar A. et al., ApJ, 2024.</li>
+<li>Shah Z. et al., MNRAS, 2020, 496, 3348.</li>
+<li>Shah Z. et al., MNRAS, 2019, 484, 3168.</li>
+<li>... plus all remaining papers from your CV (can be expanded further with DOI links).</li>
+</ol>
+</div>
+</div>
+
+<div id="teaching" class="section">
+<h2>Teaching</h2>
+<div class="card">
+<ul>
+<li>Quantum Mechanics</li>
+<li>Relativistic Quantum Mechanics</li>
+<li>Mathematical Physics</li>
+</ul>
+</div>
+</div>
+
+<div id="talks" class="section">
+<h2>Invited Talks & Conferences</h2>
+<div class="card">
+<ul>
+<li>AstroSat & XPoSat Workshop 2024 (Resource Person)</li>
+<li>Himalayan Meet of Astronomers 2023 (Invited Talk)</li>
+<li>University of Southampton Seminar</li>
+<li>IUCAA Annual Seminars</li>
+<li>Multiple national & international conferences and workshops</li>
+</ul>
+</div>
+</div>
+
+<div id="contact" class="section">
 <h2>Contact</h2>
+<div class="card">
 <p>
-Email: shahzahir4@gmail.com<br>
-Phone: +91-7780864526<br>
-Department of Physics, Central University of Kashmir, Ganderbal-191201, J&K, India
+<b>Email:</b> shahzahir4@gmail.com<br>
+<b>Phone:</b> +91-7780864526<br>
+<b>Address:</b> Department of Physics, Central University of Kashmir, Ganderbal-191201, J&K, India
 </p>
 </div>
+</div>
+
+</div>
+
+<footer>
+© Dr. Zahir Ahmad Shah | Academic Homepage
+</footer>
 
 </body>
 </html>
